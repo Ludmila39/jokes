@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup as b
 
 
 URL = 'https://www.anekdot.ru/last/good/'
-API_KEY = '5221485540:AAGocMsQXlj6vxIpoLL3e3NutRYWwDZsg8U'
+API_KEY = '5308355497:AAH_xkAKHFfVpEeVcUajEq9alOzczFuXBrE'
 
 
 def parser(url):
@@ -29,7 +29,7 @@ list_of_jokes = parser(URL)
 random.shuffle(list_of_jokes)
 
 bot = telebot.TeleBot(API_KEY)
-@bot.message_handler(commands =['go'])
+@bot.message_handler(commands =['start'])
 
 def hello (message):
     bot.send_message(message.chat.id, 'Hello, input another number to laugh!')
